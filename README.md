@@ -1,1 +1,1 @@
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/Baimkuy/Autoscript/GM/ubu20-deb10-stable.sh && chmod +x ubu20-deb10-stable.sh && ./ubu20-deb10-stable.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/zidnyzd/hhh/main/sc.sh && chmod +x sc.sh && ./sc.sh
