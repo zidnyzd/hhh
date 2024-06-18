@@ -54,7 +54,7 @@ Button.inline(" 60 Day ","60")]])
 			x = [x.group() for x in re.finditer("vless://(.*)",a)]
 			print(x)
 			# remarks = re.search("#(.*)",x[0]).group(1)
-			# domain = re.search("@(.*?):",x[0]).group(1)
+			domain = re.search("@(.*?):",x[0]).group(1)
 			uuid = re.search("vless://(.*?)@",x[0]).group(1)
 			# path = re.search("path=(.*)&",x[0]).group(1)
 			msg = f"""
@@ -183,7 +183,7 @@ Button.inline(" 60 Menit ","60")]])
 			x = [x.group() for x in re.finditer("vless://(.*)",a)]
 			print(x)
 			remarks = re.search("#(.*)",x[0]).group(1)
-			# domain = re.search("@(.*?):",x[0]).group(1)
+			domain = re.search("@(.*?):",x[0]).group(1)
 			uuid = re.search("vless://(.*?)@",x[0]).group(1)
 			# path = re.search("path=(.*)&",x[0]).group(1)
 			msg = f"""

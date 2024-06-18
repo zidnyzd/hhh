@@ -6,7 +6,7 @@ echo -e "\033[1;93m┌───────────────────�
 echo -e "\033[1;93m│$NC\033[42m          MENU MANAGER BOT                $NC"
 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
 echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
-echo -e "\033[1;93m│  ${grenbo}1.${NC} \033[0;36mBOT FANEL${NC}"
+echo -e "\033[1;93m│  ${grenbo}1.${NC} \033[0;36mBOT PANEL${NC}"
 echo -e "\033[1;93m│  ${grenbo}2.${NC} \033[0;36mBOT NOTIF${NC}"
 echo -e "\033[1;93m│  ${grenbo}3.${NC} \033[0;36mBOT BACKUP${NC}"
 echo -e "\033[1;93m│  ${grenbo}4.${NC} \033[0;36mDELETE BOT${NC}"
