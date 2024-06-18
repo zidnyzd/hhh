@@ -44,7 +44,7 @@ echo -e "━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\e[1;97;101m       » SOFTWARE UPDATE «             \033[0m"
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
 echo -e ""
-echo -e "\033[1;91mUpdate Script Service BY BAIMSTORE\033[1;37m"
+echo -e "\033[1;91mUpdate Script Service BY ZIDSTORE\033[1;37m"
 fun_bar 'res1'
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
 echo -e ""
