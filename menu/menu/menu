@@ -290,7 +290,7 @@ speedtest
 ;;
 19) 
 clear ;
-wget https://raw.githubusercontent.com/zidnyzd/udpcustom/main/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh && reboot
+wget https://raw.githubusercontent.com/zidnyzd/hhh/main/udp/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh && reboot
 ;;
 20) 
 clear;
