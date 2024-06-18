@@ -79,11 +79,12 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
 apt install ruby -y
+apt install curl -y
 gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/zidnyzd/linux/main/repo-id.sh"
+    REPO="https://raw.githubusercontent.com/zidnyzd/hhh/main"
 
 ####
 start=$(date +%s)
