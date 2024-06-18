@@ -57,13 +57,16 @@ Button.inline(" 60 Day ","60")]])
 			uuid = re.search("trojan://(.*?)@",b[0]).group(1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩 Xray/Trojan Account 🇮🇩🇮🇩**
+**🇬🇧 Xray/Trojan Account 🇬🇧**
 **◇━━━━━━━━━━━━━━━━━◇**
 **» Remarks     :** `{user}`
 **» Host Server :** `{domain}`
-**» port TLS    :** `443`
-**» Path Trojan :** `(/multi path)/trojan-ws`
-**» Password     :** `{uuid}`
+**» Host XrayDNS:** `{HOST}`
+**» User Quota  :** `{pw} GB`
+**» Port DNS    :** `443, 53`
+**» port TLS    :** `222-1000`
+**» User ID     :** `{uuid}`
+**» Pub Key     :** {PUB}
 **━━━━━━━━━━━━━━━━**
 **» Link WS    :** 
 `{b[0].replace(" ","")}`
@@ -74,7 +77,7 @@ Button.inline(" 60 Day ","60")]])
 **» Format OpenClash : https://{domain}:81/trojan-{user}.txt
 **━━━━━━━━━━━━━━━━**
 **Expired Until:** `{later}`
-**» 🌀@storezid**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -97,7 +100,7 @@ async def cek_trojan(event):
 {z}
 
 **Shows Logged In Users Trojan**
-**» 🌀@storezid**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -156,14 +159,17 @@ Button.inline(" 60 Menit ","60")]])
 			uuid = re.search("trojan://(.*?)@",b[0]).group(1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩 Xray/Trojan Account 🇮🇩🇮🇩**
+**🇬🇧 Xray/Trojan Account 🇬🇧**
 **━━━━━━━━━━━━━━━━━**
 **» Remarks     :** `{remarks}`
 **» Host Server :** `{domain}`
+**» Host XrayDNS:** `{HOST}`
 **» User Quota  :** `Unlimited`
-**» port TLS    :** `443`
+**» Port DNS    :** `443, 53`
+**» port TLS    :** `222-1000`
 **» Path Trojan :** `(/multi path)/trojan-ws`
-**» Password     :** `{uuid}`
+**» User ID     :** `{uuid}`
+**» Pub Key     :** {PUB}
 **━━━━━━━━━━━━━━━━**
 **» Link WS    :** 
 `{b[0].replace(" ","")}`
@@ -172,7 +178,7 @@ Button.inline(" 60 Menit ","60")]])
 `{b[1].replace(" ","")}`
 **━━━━━━━━━━━━━━━━**
 **» Expired Until:** `{exp} Minutes`
-**» 🌀@storezid**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -218,10 +224,10 @@ Button.inline(" DELETE TROJAN ","delete-trojan")],
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-**🇮🇩🇮🇩 TROJAN MANAGER 🇮🇩🇮🇩**
+**🇬🇧 TROJAN MANAGER 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 🔰 **» Service:** `TROJAN`
-🔰 **» Hostname/IP:** `{DOMAIN}`
+🔰 **» Hostname:** `{DOMAIN}`
 🔰 **» ISP:** `{z["isp"]}`
 🔰 **» Country:** `{z["country"]}`
 ━━━━━━━━━━━━━━━━━━━━━━━ 

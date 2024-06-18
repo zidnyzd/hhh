@@ -37,7 +37,7 @@ Button.inline(" OTHER SETTING ","setting")],
 
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-     **ZIDVPNSTORE**
+   **🇬🇧 GHOIB TUNNELING 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 **» OS     :** `{namaos.strip().replace('"','')}`
 **» CITY :** `{city.strip()}`

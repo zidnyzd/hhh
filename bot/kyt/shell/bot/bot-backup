@@ -46,9 +46,9 @@ ISP         : $ISPVPS
 LOCATION    : $CITY
 LINK BACKUP : $link
 _______________________________________
-Report bugs   : https://t.me/storezid
-ZidStore Project
-    " | mail -s "ZidStore Backup" $EMAIL
+Report bugs   : https://t.me/baimstore
+baimstore Project
+    " | mail -s "baimstore Backup" $EMAIL
     echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "SUCCESSFULL BACKUP YOUR VPS"
     echo -e "Please Save The Following Data"

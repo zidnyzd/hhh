@@ -66,7 +66,7 @@ Button.inline(" 60 Day ","60")]])
 			z1 = json.loads(z1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩 Xray/Vmess Account 🇮🇩🇮🇩**
+**🇬🇧 Xray/Vmess Account 🇬🇧**
 **━━━━━━━━━━━━━━━━━**
 **» Remarks      :** `{z["ps"]}`
 **» Domain       :** `{z["add"]}`
@@ -98,7 +98,7 @@ Button.inline(" 60 Day ","60")]])
 **» Format OpenClash :** https://{DOMAIN}:81/vmess-{user}.txt
 **━━━━━━━━━━━━━━━━━**
 **» Expired Until:** `{later}`
-**» 🌀@baimstore**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -161,7 +161,7 @@ Button.inline(" 60 Menit ","60")]])
 			z1 = json.loads(z1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩 Xray/Vmess Account 🇮🇩🇮🇩**
+**🇬🇧 Xray/Vmess Account 🇬🇧**
 **━━━━━━━━━━━━━━━━━**
 **» Remarks      :** `{z["ps"]}`
 **» Domain       :** `{z["add"]}`
@@ -193,7 +193,7 @@ Button.inline(" 60 Menit ","60")]])
 **» Format OpenClash :** https://{DOMAIN}:81/vmess-{z["ps"]}.txt
 **━━━━━━━━━━━━━━━━━**
 **» Expired Until:** `{exp} Minutes`
-**» 🌀@baimstore**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -217,7 +217,7 @@ async def cek_vmess(event):
 {z}
 
 **Shows Logged In Users Vmess**
-**» 🌀@baimstore**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -261,10 +261,10 @@ Button.inline(" DELETE VMESS ","delete-vmess")],
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-**🇮🇩🇮🇩 VMESS MANAGER 🇮🇩🇮🇩**
+**🇬🇧 VMESS MANAGER 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 🔰 **» Service:** `VMESS`
-🔰 **» Hostname/IP:** `{DOMAIN}`
+🔰 **» Hostname** `{DOMAIN}`
 🔰 **» ISP:** `{z["isp"]}`
 🔰 **» Country:** `{z["country"]}`
 ━━━━━━━━━━━━━━━━━━━━━━━ 

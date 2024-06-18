@@ -29,7 +29,7 @@ async def rebooot(event):
 		subprocess.check_output(cmd, shell=True)
 		await event.edit(f"""
 **» REBOOT SERVER**
-**» 🤖@myridtunnel**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -68,7 +68,7 @@ async def resx(event):
 		await event.edit(f"""
 ```Processing... 100%\n█████████████████████████ ```
 **» Restarting Service Done**
-**» 🌀@storezid**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -104,7 +104,7 @@ async def speedtest(event):
 **
 {z}
 **
-**» 🌀**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -131,7 +131,7 @@ async def backup(event):
 ```
 {a}
 ```
-**» 🌀@**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -156,7 +156,7 @@ async def restsore(event):
 			await event.respond("**Link Not Exist**")
 		else:
 			msg = f"""```{z}```
-**🌀@**
+**🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -177,9 +177,9 @@ Button.inline(" RESTORE","restore")],
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-   **ZIDVPNSTORE**
+   **🇬🇧 GHOIB TUNNELING 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-🔰 **» Hostname/IP:** `{DOMAIN}`
+🔰 **» Hostname:** `{DOMAIN}`
 🔰 **» ISP:** `{z["isp"]}`
 🔰 **» Country:** `{z["country"]}`
 ━━━━━━━━━━━━━━━━━━━━━━━ 
@@ -205,9 +205,9 @@ Button.inline(" RESTART SERVICE","resx")],
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-**🇮🇩🇮🇩 PREMIUM PANEL MENU 🇮🇩🇮🇩**
+**🇬🇧 PREMIUM PANEL MENU 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-🔰 **» Hostname/IP:** `{DOMAIN}`
+🔰 **» Hostname:** `{DOMAIN}`
 🔰 **» ISP:** `{z["isp"]}`
 🔰 **» Country:** `{z["country"]}`
 ━━━━━━━━━━━━━━━━━━━━━━━ 

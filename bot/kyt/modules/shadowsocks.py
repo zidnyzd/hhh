@@ -59,7 +59,7 @@ Button.inline(" 60 Day ","60")]])
 			# path = re.search("path=(.*)&",x[0]).group(1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩  SHDWSCSK ACCOUNT 🇮🇩🇮🇩**
+**🇬🇧 SHDWSCSK ACCOUNT 🇬🇧**
 **━━━━━━━━━━━━━━━━━**
 **» Remarks     :** `{user}`
 **» Host Server :** `{DOMAIN}`
@@ -106,7 +106,7 @@ async def cek_shadowsocks(event):
 {z}
 
 **Shows Logged In Users Shadowsocks**
-**» 🌀**
+**» 🤖@ghoibvpnn**
 """,buttons=[[Button.inline("‹ Main Menu ›","menu")]])
 	sender = await event.get_sender()
 	a = valid(str(sender.id))
@@ -189,7 +189,7 @@ Button.inline(" 60 Menit ","60")]])
 			# path = re.search("path=(.*)&",x[0]).group(1)
 			msg = f"""
 **━━━━━━━━━━━━━━━━━**
-**🇮🇩🇮🇩 SHDWSCSK Account 🇮🇩🇮🇩**
+**🇬🇧 SHDWSCSK Account 🇬🇧**
 **━━━━━━━━━━━━━━━━━**
 **» Remarks     :** `{remarks}`
 **» Host Server :** `{DOMAIN}`
@@ -214,7 +214,7 @@ Button.inline(" 60 Menit ","60")]])
 **» Link JSON  :** `https://${DOMAIN}:81/ss-{remarks}.txt`
 **━━━━━━━━━━━━━━━━━**
 **» Expired Until :** `{exp} Minutes`
-**» 🌀**
+**» 🤖@ghoibvpnn**
 """
 			await event.respond(msg)
 	chat = event.chat_id
@@ -237,13 +237,13 @@ Button.inline(" DELETE SHDWSCSK ","delete-shadowsocks")],
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-**🇮🇩🇮🇩 SHDWSK MANAGER 🇮🇩🇮🇩**
+**🇬🇧 SHDWSK MANAGER 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 🔰 **» Service:** `SHADOWSOCKS`
-🔰 **» Hostname/IP:** `{DOMAIN}`
+🔰 **» Hostname:** `{DOMAIN}`
 🔰 **» ISP:** `{z["isp"]}`
 🔰 **» Country:** `{z["country"]}`
-🌀 **» @storezid**
+🤖 **» @ghoibvpnn**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 """
 		await event.edit(msg,buttons=inline)

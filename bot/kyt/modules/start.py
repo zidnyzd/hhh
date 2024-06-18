@@ -5,8 +5,8 @@ from kyt import *
 async def start(event):
 	inline = [
 [Button.inline("PANEL CREATE ACCOUNT","menu")],
-[Button.url("TELEGRAM GROUP","https://t.me/zidvpn"),
-Button.url("ORDER SCRIPT","https://t.me/storezid")]]
+[Button.url("TELEGRAM GROUP","https://t.me/ghoibvpn_Ch"),
+Button.url("ORDER SCRIPT","https://t.me/ghoibvpnn")]]
 	sender = await event.get_sender()
 	val = valid(str(sender.id))
 	if val == "false":
@@ -32,7 +32,7 @@ Button.url("ORDER SCRIPT","https://t.me/storezid")]]
 
 		msg = f"""
 ━━━━━━━━━━━━━━━━━━━━━━━ 
-**🇮🇩🇮🇩 PREMIUM PANEL MENU 🇮🇩🇮🇩**
+**🇬🇧 PREMIUM PANEL MENU 🇬🇧**
 ━━━━━━━━━━━━━━━━━━━━━━━ 
 🔰 **» OS     :** `{namaos.strip().replace('"','')}`
 🔰 **» CITY :** `{city.strip()}`
