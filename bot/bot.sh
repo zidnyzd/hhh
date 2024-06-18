@@ -9,8 +9,8 @@ NC='\e[0m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-rm -rf bot.zip
-rm -rf kyt.zip
+rm -rf bot.sh
+rm -rf kyt.sh
 wget https://raw.githubusercontent.com/zidnyzd/hhh/main/bot/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin

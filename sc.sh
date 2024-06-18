@@ -165,6 +165,7 @@ function first_setup(){
     sudo apt install gnupg -y
     sudo apt install bzip2 -y 
     sudo apt install screen -y
+    sudo apt install curl -y
     apt-get install --no-install-recommends software-properties-common
     add-apt-repository ppa:vbernat/haproxy-2.0 -y
     apt-get -y install haproxy=2.0.\*
