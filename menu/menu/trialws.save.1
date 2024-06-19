@@ -1,3 +1,4 @@
+.
 #!/bin/bash
 Green="\e[92;1m"
 RED="\033[31m"
@@ -66,7 +67,7 @@ domain=$(cat /etc/xray/domain)
 clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
   echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-  echo -e " CREATE VMESS ACCOUNT           "
+  echo -e " CREATE VMESS TRIAL ACCOUNT           "
   echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 
   read -rp "User: " -e user
@@ -74,9 +75,9 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
   if [[ ${CLIENT_EXISTS} == '1' ]]; then
     clear
-    echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-    echo -e " CREATE VMESS ACCOUNT           "
-    echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+  echo -e " CREATE VMESS TRIAL ACCOUNT           "
+  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
     echo ""
     echo "A client with the specified name was already created, please choose another name."
     echo ""
@@ -85,25 +86,10 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
     menu
   fi
 done
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
 uuid=$(cat /proc/sys/kernel/random/uuid)
-read -p "Expired (days): " masaaktif
-read -p "Limit User (GB): " Quota
-read -p "Limit User (IP): " iplimit
-tgl=$(date -d "$masaaktif days" +"%d")
-bln=$(date -d "$masaaktif days" +"%b")
-thn=$(date -d "$masaaktif days" +"%Y")
-expe="$tgl $bln, $thn"
-tgl2=$(date +"%d")
-bln2=$(date +"%b")
-thn2=$(date +"%Y")
-tnggl="$tgl2 $bln2, $thn2"
-exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
+read -p "Expired (minutes): " masaaktif
+exp=$(date -d "$masaaktif minutes" +"%Y-%m-%d")
 sed -i '/#vmess$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
-sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
 
 asu=`cat<<EOF
@@ -160,6 +146,7 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 
+clear
 cat >/var/www/html/vmess-$user.txt <<-END
 
 ◇━━━━━━━━━━━━━━━━━◇
@@ -239,57 +226,12 @@ if [ ! -e /etc/vmess ]; then
   mkdir -p /etc/vmess
 fi
 
-if [[ $iplimit -gt 0 ]]; then
-mkdir -p /etc/kyt/limit/vmess/ip
-echo -e "$iplimit" > /etc/kyt/limit/vmess/ip/$user
-else
-echo > /dev/null
-fi
-
-if [ -z ${Quota} ]; then
-  Quota="0"
-fi
-
-c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
-d=$((${c} * 1024 * 1024 * 1024))
-
-if [[ ${c} != "0" ]]; then
-  echo "${d}" >/etc/vmess/${user}
-fi
 DATADB=$(cat /etc/vmess/.vmess.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
 if [[ "${DATADB}" != '' ]]; then
   sed -i "/\b${user}\b/d" /etc/vmess/.vmess.db
 fi
-echo "### ${user} ${exp} ${uuid} ${Quota} ${iplimit}" >>/etc/vmess/.vmess.db
+echo "### ${user} ${exp} ${uuid}" >>/etc/vmess/.vmess.db
 clear
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "      ⭐ VMESS ACCOUNT ⭐" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Remarks          : ${user}" | tee -a /etc/user-create/user.log
-echo -e "Domain           : ${domain}" | tee -a /etc/user-create/user.log
-echo -e "User Quota       : ${Quota} GB"  | tee -a /etc/user-create/user.log
-echo -e "User Ip            : ${iplimit} IP" | tee -a /etc/user-create/user.log
-echo -e "Port TLS         : 400-900" | tee -a /etc/user-create/user.log
-echo -e "Port none TLS    : 80, 8080, 8880, 2082" | tee -a /etc/user-create/user.log
-echo -e "id               : ${uuid}" | tee -a /etc/user-create/user.log
-echo -e "alterId          : 0" | tee -a /etc/user-create/user.log
-echo -e "Security         : auto" | tee -a /etc/user-create/user.log
-echo -e "Network          : ws" | tee -a /etc/user-create/user.log
-echo -e "Path             : /vmess/multi-path" | tee -a /etc/user-create/user.log
-echo -e "Dynamic          : https://bugmu.com/path" | tee -a /etc/user-create/user.log
-echo -e "ServiceName      : vmess-grpc" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link TLS         : ${vmesslink1}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link none TLS    : ${vmesslink2}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link GRPC        : ${vmesslink3}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Format OpenClash : https://${domain}:81/vmess-$user.txt" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Aktif Selama     : $masaaktif Hari" | tee -a /etc/user-create/user.log
-echo -e "Dibuat Pada      : $tnggl" | tee -a /etc/user-create/user.log
-echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo "" | tee -a /etc/user-create/user.log
-read -p "Enter Back To Menu"
+echo -e ""
+echo -e "\033[1;93m_____________________________________________________\033[0m"
+echo -e "                        

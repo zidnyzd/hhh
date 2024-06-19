@@ -63,7 +63,7 @@ checking_sc() {
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/+6285872036588"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/+6285294609585"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit 0
   fi
@@ -144,9 +144,14 @@ echo "### ${user} ${exp} ${uuid} ${Quota} ${iplimit}" >>/etc/vless/.vless.db
 clear
 cat >/var/www/html/vless-$user.txt <<-END
 
-◇━━━━━━━━━━━━━━━━━◇
+==========================
+
+AutoScript Premium by ZidStore
+Telegram : @storezid
+
+==========================
    Format For Clash
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 # Format Vless WS TLS
 
 - name: Vless-$user-WS TLS
@@ -198,18 +203,18 @@ cat >/var/www/html/vless-$user.txt <<-END
   grpc-mode: gun
     grpc-service-name: vless-grpc
 
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 Link Akun Vless 
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 Link TLS      : 
 ${vlesslink1}
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 Link none TLS : 
 ${vlesslink2}
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 Link GRPC     : 
 ${vlesslink3}
-◇━━━━━━━━━━━━━━━━━◇
+==========================
 
 
 END
@@ -218,35 +223,31 @@ systemctl restart xray
 systemctl restart nginx
 clear
 echo -e ""
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
-echo -e "                         VLESS ACCOUNT           " | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
+echo -e "                         VLESS ACCOUNT           " | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Remarks     : ${user}" | tee -a /etc/user-create/user.log
 echo -e "Domain      : ${domain}" | tee -a /etc/user-create/user.log
 echo -e "User Quota  : ${Quota} GB" | tee -a /etc/user-create/user.log
 echo -e "User Ip       : ${iplimit} IP" | tee -a /etc/user-create/user.log
 echo -e "port TLS    : 400-900" | tee -a /etc/user-create/user.log
-#echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
 echo -e "Port NTLS   : 80, 8080, 8880, 2082" | tee -a /etc/user-create/user.log
 echo -e "User ID     : ${uuid}" | tee -a /etc/user-create/user.log
-#echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
-#echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
 echo -e "Encryption  : none" | tee -a /etc/user-create/user.log
 echo -e "Path TLS    : /vless/multi-path " | tee -a /etc/user-create/user.log
 echo -e "ServiceName : vless-grpc" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Link TLS    : ${vlesslink1}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Link NTLS   : ${vlesslink2}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Link GRPC   : ${vlesslink3}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo -e "Aktif Selama     : $masaaktif Hari" | tee -a /etc/user-create/user.log
 echo -e "Dibuat Pada      : $tnggl" | tee -a /etc/user-create/user.log
 echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m_____________________________________________________\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/user-create/user.log
 echo "" | tee -a /etc/user-create/user.log
 read -p "Enter Back To menu"
-menu

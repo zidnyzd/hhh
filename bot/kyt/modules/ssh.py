@@ -82,20 +82,18 @@ Button.inline(" 60 Day ","60")]])
 **» Password         :** `{pw.strip()}`
 **━━━━━━━━━━━━━━━━━**
 **» Host             :** `{DOMAIN}`
-**» Pub Key          :** `{PUB}`
 **» Port OpenSSH     :** `443, 80, 22`
-**» Port DNS         :** `443, 53 ,22`
-**» Port Dropbear    :** `443, 109`
-**» Port Dropbear WS :** `443, 109`
-**» Port SSH WS      :** `80, 8080, 8081-9999 `
-**» Port SSH SSL WS  :** `443`
-**» Port SSL/TLS     :** `222-1000`
+**» Port Dropbear    :** `443, 143`
+**» Port Dropbear WS :** `443, 143`
+**» Port SSH WS      :** `80, 8080`
+**» Port SSH SSL WS  :** `443, 8443`
+**» Port SSL/TLS     :** `443`
 **» Port OVPN WS SSL :** `443`
 **» Port OVPN SSL    :** `443`
 **» Port OVPN TCP    :** `443, 1194`
 **» Port OVPN UDP    :** `2200`
 **» Proxy Squid      :** `3128`
-**» BadVPN UDP       :** `7100, 7300, 7300`
+**» BadVPN UDP       :** `7100, 7200, 7300`
 **━━━━━━━━━━━━━━━━━**
 **» Payload WSS      :** `GET wss://BUG.COM/ HTTP/1.1[crlf]Host: {DOMAIN}[crlf]Upgrade: websocket[crlf][crlf]`
 **━━━━━━━━━━━━━━━━━**
@@ -106,6 +104,7 @@ Button.inline(" 60 Day ","60")]])
 **━━━━━━━━━━━━━━━━━**
 **» Save Link Account:** `https://{DOMAIN}:81/ssh-{user.strip()}.txt`
 **» Expired Until:** `{later}`
+**» Created by @storezid`
 
 """
 			await event.respond(msg)
