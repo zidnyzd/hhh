@@ -301,6 +301,7 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
 # USERNAME
+izinsc="https://raw.githubusercontent.com/zidnyzd/hhh/main/Register"
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
