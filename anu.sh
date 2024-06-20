@@ -340,12 +340,12 @@ fi
 <code>────────────────────</code>
 <b> 🟢 AUTOSCRIPT PREMIUM 🟢</b>
 <code>────────────────────</code>
-<code>ID     : </code><code>$USRSC</code>
+<code>User   : </code><code>$username</code>
 <code>Domain : </code><code>$domain</code>
 <code>Date   : </code><code>$TIME</code>
 <code>Time   : </code><code>$TIMEZONE</code>
-<code>Ip vps : </code><code>$ipsaya</code>
-<code>Exp Sc : </code><code>$EXPSC</code>
+<code>IP VPS : </code><code>$ipsaya</code>
+<code>Exp Sc : </code><code>$exp</code>
 <code>────────────────────</code>
 <i>Automatic Notification from Github</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"💸ᴏʀᴅᴇʀ💸","url":"https://t.me/storezid"},{"text":"💰ɪɴꜱᴛᴀʟʟ💰","url":"http://wa.me/+62859106812670"}]]}'
