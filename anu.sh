@@ -46,8 +46,8 @@ checking_sc() {
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mNot Registered Yet${NC}"
     echo -e "     \033[0;33mBuy Access Permissions for Scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "           ${BLUE}Telegram${NC} t.me/storezid"
-    echo -e "           ${green}WhatsApp${NC} wa.me/+62859106812670"
+    echo -e "        ${BLUE}Telegram${NC} t.me/storezid"
+    echo -e "      ${green}WhatsApp${NC} wa.me/+62859106812670"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit 0
   fi
